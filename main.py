@@ -6,7 +6,7 @@ from src.website import Website
 
 
 load_dotenv(override=True)
-api_key = os.getenv('name')
+api_key = os.getenv('OPENAI_API_KEY')
 
 # Check the key
 
