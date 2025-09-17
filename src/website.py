@@ -5,7 +5,6 @@ headers = {
  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36"
 }
 
-
 class Website:
     def __init__(self, url: str) -> None:
         self.url = url
@@ -17,12 +16,6 @@ class Website:
         self.text = soup.body.get_text(separator="\n", strip=True)
 
 
-# A class to represent a Webpage
-
-# Some websites need you to use proper headers when fetching them:
-headers = {
- "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36"
-}
 
 class Website2:
 
