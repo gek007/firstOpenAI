@@ -150,9 +150,14 @@ def create_brochure(company_name, url):
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": get_brochure_user_prompt(company_name, url)}
           ],
+          stream=True
     )
-    result = response.choices[0].message.content
-    print(result)
+
+    for chunk in response:
+       print(chunk.choices[0].delta.content or '', end='')
+
+    # result = response.choices[0].message.content
+    # print(result)
 
 create_brochure("HuggingFace", "https://huggingface.co")
 
